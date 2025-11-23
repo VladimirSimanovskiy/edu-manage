@@ -1,0 +1,20 @@
+export {
+	AlertDialog,
+	AlertDialogPortal,
+	AlertDialogOverlay,
+	AlertDialogTrigger,
+	AlertDialogContent,
+	type AlertDialogContentProps,
+	AlertDialogHeader,
+	AlertDialogFooter,
+	AlertDialogTitle,
+	type AlertDialogTitleProps,
+	AlertDialogIcon,
+	type AlertDialogIconProps,
+	AlertDialogDescription,
+	type AlertDialogDescriptionProps,
+	AlertDialogAction,
+	AlertDialogCancel,
+	AlertDialogPrimitiveAction,
+	AlertDialogPrimitiveCancel
+} from "./AlertDialog";

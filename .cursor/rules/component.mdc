@@ -1,0 +1,25 @@
+---
+description: Правила для компонентов
+globs: 
+alwaysApply: false
+---
+
+# Правила для компонентов в проекте на React
+
+- Каждый компонент должен находиться в отдельной директории.
+- Название директории пишется в kebab-case (например, input-base, datepicker, card).
+- Название файла и компонента должно быть в PascalCase (например, InputBase.tsx, Datepicker.tsx, Card.tsx).
+- Для каждого компонента создан файл документации в формате .mdx, следующий шаблону из [template.mdx](mdc:docs/template.mdx) (например, Input.mdx)
+- Для каждого примера компонента в Storybook доступен полный код через кнопку 'Show Code'
+- Компоненты, которые планируется использовать в проектах, должны быть экспортированы в index.ts файле соответствующей директории
+- Компонент должен быть функциональным и написан на TypeScript.
+- Для стилизации используется библиотека tailwind-variants.
+- Название tailwind-variants формируется по шаблону <Название компонента>Styles. Например, tagStyles
+- Props должны быть типизированы на основе tailwind-variants c помощью `VariantProps`.
+- Для каждого компонента можно создать Storybook файл (например, InputBase.stories.ts).
+- Если в примерах в story нужно использовать иконки, то используются Lucide Icons.
+- Примеры в story делай на английском языке
+- Для цветов используются переменные из конфигурации [tailwind.config.js](mdc:tailwind.config.js).
+- Значения CSS переменных для темы tailwind задаются в [theme.css](mdc:src/styles/theme.css).
+- Компонент и его Props должны содержать JSDoc комментарии.
+- Компонент должен быть сделан по аналогии с готовыми компонентами: [Input.tsx](mdc:src/components/input/input/Input.tsx), [ButtonBase.tsx](mdc:src/components/button/button-base/ButtonBase.tsx), [Button.tsx](mdc:src/components/button/button/Button.tsx)
