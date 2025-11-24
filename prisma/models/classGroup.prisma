@@ -1,0 +1,9 @@
+model ClassGroup {
+    id              Int              @id @default(autoincrement())
+    name            String
+    classId         Int
+    class           Class            @relation(fields: [classId], references: [id])
+    createdAt       DateTime         @default(now())
+    updatedAt       DateTime         @updatedAt
+    lessonSchedules LessonSchedule[]
+}

@@ -1,0 +1,14 @@
+model LessonSubstitution {
+    id               Int            @id @default(autoincrement())
+    date             DateTime
+    teacherId        Int
+    teacher          Teacher        @relation(fields: [teacherId], references: [id])
+    subjectId        Int
+    subject          Subject        @relation(fields: [subjectId], references: [id])
+    roomId           Int
+    room             Room           @relation(fields: [roomId], references: [id])
+    lessonScheduleId Int
+    lessonSchedule   LessonSchedule @relation(fields: [lessonScheduleId], references: [id])
+    createdAt        DateTime       @default(now())
+    updatedAt        DateTime       @updatedAt
+}

@@ -1,0 +1,9 @@
+model CalendarWeek {
+    id              Int              @id @default(autoincrement())
+    weekDay         Int
+    name            String
+    shortName       String
+    createdAt       DateTime         @default(now())
+    updatedAt       DateTime         @updatedAt
+    lessonSchedules LessonSchedule[]
+}

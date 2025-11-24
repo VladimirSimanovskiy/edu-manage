@@ -1,0 +1,9 @@
+model Class {
+    id              Int              @id @default(autoincrement())
+    grade           Int
+    suffix          String
+    createdAt       DateTime         @default(now())
+    updatedAt       DateTime         @updatedAt
+    classGroups     ClassGroup[]
+    lessonSchedules LessonSchedule[]
+}

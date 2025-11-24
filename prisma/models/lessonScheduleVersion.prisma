@@ -1,0 +1,9 @@
+model LessonScheduleVersion {
+    id              Int              @id @default(autoincrement())
+    name            String
+    dateBegin       DateTime
+    dateEnd         DateTime
+    createdAt       DateTime         @default(now())
+    updatedAt       DateTime         @updatedAt
+    lessonSchedules LessonSchedule[]
+}

@@ -1,0 +1,22 @@
+model LessonSchedule {
+    id                      Int                   @id @default(autoincrement())
+    roomId                  Int
+    room                    Room                  @relation(fields: [roomId], references: [id])
+    teacherId               Int
+    teacher                 Teacher               @relation(fields: [teacherId], references: [id])
+    classId                 Int
+    class                   Class                 @relation(fields: [classId], references: [id])
+    groupId                 Int
+    group                   ClassGroup            @relation(fields: [groupId], references: [id])
+    subjectId               Int
+    subject                 Subject               @relation(fields: [subjectId], references: [id])
+    lessonTimeslotId        Int
+    lessonTimeslot          LessonTimeslot        @relation(fields: [lessonTimeslotId], references: [id])
+    lessonScheduleVersionId Int
+    lessonScheduleVersion   LessonScheduleVersion @relation(fields: [lessonScheduleVersionId], references: [id])
+    createdAt               DateTime              @default(now())
+    updatedAt               DateTime              @updatedAt
+    calendarWeek            CalendarWeek?         @relation(fields: [calendarWeekId], references: [id])
+    calendarWeekId          Int?
+    lessonSubstitutions     LessonSubstitution[]
+}

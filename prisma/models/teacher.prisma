@@ -1,0 +1,10 @@
+model Teacher {
+    id                  Int                  @id @default(autoincrement())
+    name                String
+    surname             String
+    patronymic          String
+    createdAt           DateTime             @default(now())
+    updatedAt           DateTime             @updatedAt
+    lessonSchedules     LessonSchedule[]
+    lessonSubstitutions LessonSubstitution[]
+}

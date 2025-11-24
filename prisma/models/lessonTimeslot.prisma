@@ -1,0 +1,9 @@
+model LessonTimeslot {
+    id              Int              @id @default(autoincrement())
+    number          Int
+    startTime       DateTime         @db.Time
+    endTime         DateTime         @db.Time
+    createdAt       DateTime         @default(now())
+    updatedAt       DateTime         @updatedAt
+    lessonSchedules LessonSchedule[]
+}
