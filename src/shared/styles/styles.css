@@ -1,0 +1,10 @@
+@import "./theme.css";
+@import "./font-inter.css";
+@import "./font-smoothing.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+

@@ -1,0 +1,37 @@
+import { Canvas, Meta, Controls, Description } from "@storybook/blocks";
+import * as ComponentStories from "./Button.stories";
+
+<Meta of={ComponentStories} />
+
+# Button
+
+`Button` - это основной компонент кнопки, который расширяет функциональность `ButtonBase`, добавляя поддержку иконок и улучшенное позиционирование содержимого.
+
+- Компонент основан на `ButtonBase`
+
+[Ссылка на Figma](https://www.figma.com/design/lc2aOtrukFLJQwxxgH3Cgm/UI-kit?node-id=34-6&p=f&t=LJQpzoFzCfKYGUgN-0).
+
+### Базовое использование
+
+<Canvas of={ComponentStories.Default} />
+
+```tsx
+import { Button } from "ics-ui-kit/components/button";
+import { Circle } from "lucide-react";
+
+export const Basic = () => {
+	return (
+		<Button startIcon={Circle} endIcon={Circle}>
+			Кнопка
+		</Button>
+	);
+};
+```
+
+### Примеры всех вариантов кнопок в разных статусах
+
+<Canvas of={ComponentStories.Showcase} />
+
+### Свойства
+
+<Controls />

@@ -1,0 +1,32 @@
+import { Canvas, Meta, Controls, Description } from "@storybook/blocks";
+import * as ComponentStories from "./ButtonBase.stories";
+
+<Meta of={ComponentStories} />
+
+# ButtonBase
+
+`ButtonBase` - это базовый компонент кнопки, который предоставляет основную функциональность и стилизацию для всех типов кнопок.
+
+- Компонент использует `button` элемент по умолчанию
+
+[Ссылка на Figma](https://www.figma.com/design/lc2aOtrukFLJQwxxgH3Cgm/UI-kit?node-id=34-6&p=f&t=LJQpzoFzCfKYGUgN-0).
+
+### Базовое использование
+
+<Canvas of={ComponentStories.Default} />
+
+```tsx
+import { ButtonBase } from "ics-ui-kit/components/button";
+
+export const Basic = () => {
+	return <ButtonBase>Button</ButtonBase>;
+};
+```
+
+### Кнопка с иконками
+
+<Canvas of={ComponentStories.WithIcons} />
+
+### Свойства
+
+<Controls />
