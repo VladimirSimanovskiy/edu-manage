@@ -18,5 +18,3 @@ export const Description = React.forwardRef<HTMLDivElement, DescriptionProps>(
 );
 
 Description.displayName = "Description";
-
-
