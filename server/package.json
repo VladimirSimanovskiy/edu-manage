@@ -1,0 +1,21 @@
+{
+  "name": "edu-manage-server",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/main.ts"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "@prisma/adapter-pg": "^7.0.0",
+    "@prisma/client": "^7.0.0",
+    "dotenv": "^17.2.3",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
+
+

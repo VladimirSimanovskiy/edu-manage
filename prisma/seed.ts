@@ -141,7 +141,7 @@ async function main() {
 	});
 
 	// CalendarHoliday — государственные праздники и каникулы РФ на 2025–2026 учебный год
-	await (prisma as any).calendarHoliday.createMany({
+	await prisma.calendarHoliday.createMany({
 		data: (() => {
 			const days: { name: string; date: Date }[] = [];
 
@@ -437,7 +437,7 @@ async function main() {
 
 		if (lessonsData.length > 0) {
 			await prisma.lessonSchedule.createMany({
-				data: lessonsData as any
+				data: lessonsData
 			});
 		}
 	}
