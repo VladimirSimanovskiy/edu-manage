@@ -18,7 +18,7 @@ export function App() {
 		(MAIN_NAV_ITEMS.find((item) => item.href === location.pathname)?.id as MainPageId) ?? "schedule";
 
 	return (
-		<div className="min-h-screen bg-background text-foreground">
+		<div>
 			<Header
 				navItems={MAIN_NAV_ITEMS}
 				activeItemId={activePageId}
@@ -30,13 +30,11 @@ export function App() {
 				}}
 			/>
 
-			<main className="px-8 py-6">
-				<Routes>
-					<Route path="/" element={<Navigate to="/schedule" replace />} />
-					<Route path="/schedule" element={<SchedulePage />} />
-					<Route path="/configuration" element={<ConfigurationPage />} />
-				</Routes>
-			</main>
+			<Routes>
+				<Route path="/" element={<Navigate to="/schedule" replace />} />
+				<Route path="/schedule" element={<SchedulePage />} />
+				<Route path="/configuration/*" element={<ConfigurationPage />} />
+			</Routes>
 		</div>
 	);
 }
